@@ -20,6 +20,11 @@
 		845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */; };
 		845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */; };
 		848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690B82BCFBF690079FE74 /* Color+Extensions.swift */; };
+		848690BC2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */; };
+		848690BE2BCFC1020079FE74 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */; };
+		848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */; };
+		848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */; };
+		848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
 		84B292412BCFAC2B00FD65C0 /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */; };
 		84B292432BCFACA700FD65C0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292422BCFACA700FD65C0 /* Core */; };
 		84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B292442BCFAFA700FD65C0 /* Images.xcassets */; };
@@ -40,6 +45,11 @@
 		845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		848690B82BCFBF690079FE74 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notificationcenter.Name+Extension.swift"; sourceTree = "<group>"; };
+		848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
+		848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		848690C62BCFF3640079FE74 /* FakeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavBar.swift; sourceTree = "<group>"; };
 		84B292442BCFAFA700FD65C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +88,15 @@
 			isa = PBXGroup;
 			children = (
 				845DE40A2BCE9E46006BFFC7 /* Core */,
-				845DE4122BCEAB58006BFFC7 /* ViewModels */,
-				845DE3F92BCE99A8006BFFC7 /* Views */,
 				845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */,
 				845DE40B2BCE9FC6006BFFC7 /* AppConfig.swift */,
+				845DE3F92BCE99A8006BFFC7 /* Views */,
+				845DE4122BCEAB58006BFFC7 /* ViewModels */,
+				848690BF2BCFE2710079FE74 /* ViewModifiers */,
 				848690B92BCFBF690079FE74 /* Extensions */,
+				848690C32BCFE4CD0079FE74 /* Styles */,
 				845DE4182BCEBBF8006BFFC7 /* Fonts */,
-				845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */,
-				84B292442BCFAFA700FD65C0 /* Images.xcassets */,
+				848690C22BCFE4820079FE74 /* Images */,
 				845DE3F12BCD187F006BFFC7 /* Preview Content */,
 			);
 			path = "Sportson POC";
@@ -154,8 +165,36 @@
 			isa = PBXGroup;
 			children = (
 				848690B82BCFBF690079FE74 /* Color+Extensions.swift */,
+				848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */,
+				848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		848690BF2BCFE2710079FE74 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */,
+				848690C62BCFF3640079FE74 /* FakeNavBar.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		848690C22BCFE4820079FE74 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */,
+				84B292442BCFAFA700FD65C0 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		848690C32BCFE4CD0079FE74 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,11 +281,16 @@
 				845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */,
 				845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */,
 				845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */,
+				848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */,
 				845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */,
+				848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */,
+				848690BE2BCFC1020079FE74 /* NotificationCenter+Extension.swift in Sources */,
+				848690BC2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift in Sources */,
 				848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */,
 				845DE40C2BCE9FC6006BFFC7 /* AppConfig.swift in Sources */,
 				845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */,
 				845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */,
+				848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */,
 				845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

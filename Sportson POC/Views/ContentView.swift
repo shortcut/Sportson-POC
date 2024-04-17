@@ -10,9 +10,16 @@ import Core
 import ShortcutFoundation
 
 struct ContentView: View {
+    @InjectObject var store: Store
+
     var body: some View {
-        TabBarView()
-            .background(Color.mainBg.edgesIgnoringSafeArea(.all))
+        if store.isUserLogged || store.userDidLogin {
+            TabBarView()
+                .background(Color.mainBg)
+        } else {
+            LoginView()
+                .background(Color.mainBg)
+        }
     }
 }
 

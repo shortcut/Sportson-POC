@@ -15,31 +15,37 @@ struct TabBarView: View {
     private var activeTabButtonWidth = UIScreen.main.bounds.size.width * 0.5
 
     var body: some View {
-        TabView(selection: $vm.selectedTab) {
-            ForEach(vm.tabs) { tab in
-                view(for: tab)
-                    .tag(tab.rawValue)
-            }
-        }
-        ZStack{
-            HStack{
-                ForEach((vm.tabs), id: \.self){ item in
-                    Button{
-                        vm.selectedTab = item.rawValue
-                    } label: {
-                        CustomTabItem(imageName: item.asset, title: item.title, isActive: (vm.selectedTab == item.rawValue))
-                    }
+        VStack(spacing: 0) {
+            TabView(selection: $vm.selectedTab) {
+                ForEach(vm.tabs) { tab in
+                    view(for: tab)
+                        .tag(tab.rawValue)
                 }
             }
-            .padding(6)
+            ZStack {
+                HStack {
+                    ForEach((vm.tabs), id: \.self){ item in
+                        Button{
+                            vm.selectedTab = item.rawValue
+                        } label: {
+                            CustomTabItem(imageName: item.asset, title: item.title, isActive: (vm.selectedTab == item.rawValue))
+                        }
+                    }
+                }
+                .padding(6)
+            }
+            .frame(height: 55)
+            .background(Color.darkBg)
+            .cornerRadius(27)
+            .padding(.horizontal, 16)
+            .onAppear(perform: {
+                vm.selectedTab = 0
+            })
+            .onReceive(NotificationCenter.didRegisterBike) { _ in
+                self.store.didRegisterBike = true
+                self.store.isBikeRegistered = true
+            }
         }
-        .frame(height: 55)
-        .background(Color.darkBg)
-        .cornerRadius(27)
-        .padding(.horizontal, 16)
-        .onAppear(perform: {
-            vm.selectedTab = 0
-        })
     }
 
     @ViewBuilder

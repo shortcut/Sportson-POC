@@ -15,39 +15,44 @@ struct MyBicycleView: View {
     @State private var selectedImage: UIImage?
 
     var body: some View {
-        if !store.isBikeRegistered || !store.didRegisterBike {
-            VStack {
-                Spacer()
-                Image("myBike")
-                    .resizable()
-                    .scaledToFit()
-                Spacer()
+        VStack(spacing: 0) {
+            if store.isBikeRegistered || store.didRegisterBike {
+                myBikeView
+            } else {
+                emptyStateView
             }
-            .frame(width: UIScreen.main.bounds.size.width,
-                   height: UIScreen.main.bounds.size.height)
-            .background(Color.mainBg.edgesIgnoringSafeArea(.all))
-            .ignoresSafeArea(.all)
-        } else {
-            emptyStateView
-                .frame(width: UIScreen.main.bounds.size.width,
-                       height: UIScreen.main.bounds.size.height)
-                .background(Color.mainBg.edgesIgnoringSafeArea(.all))
-                .ignoresSafeArea(.all)
         }
+        .modifier(FakeNavBarModifier(title: "MY BIKE"))
     }
 
     var emptyStateView: some View {
         VStack {
-            Spacer()
-            Button("Open camera") {
+            Button(action:  {
                 self.showCamera.toggle()
-            }
+            },label: {
+                HStack {
+                    Image(systemName: "bicycle")
+                    Text("REGISTER BIKE")
+                }
+            })
+            .font(.title2)
+            .fontWeight(.semibold)
+            .buttonStyle(CapsuleButtonStyle())
             .fullScreenCover(isPresented: self.$showCamera) {
                 accessCameraView(selectedImage: self.$selectedImage)
                     .ignoresSafeArea(.all)
             }
-            Spacer()
         }
+        .modifier(BackgroundModifier())
+    }
+
+    var myBikeView: some View {
+        VStack {
+            Image("myBike")
+                .resizable()
+                .scaledToFit()
+        }
+        .modifier(BackgroundModifier())
     }
 }
 
@@ -84,9 +89,11 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
         guard let selectedImage = info[.originalImage] as? UIImage else { return }
         self.picker.selectedImage = selectedImage
         self.picker.isPresented.wrappedValue.dismiss()
+        NotificationCenter.default.post(name: .didRegisterBike, object: nil)
     }
 }
 
 #Preview {
     MyBicycleView()
+        .environmentObject(Store())
 }
