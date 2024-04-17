@@ -11,6 +11,18 @@
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
 		845DE3F32BCD187F006BFFC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3F22BCD187F006BFFC7 /* Preview Assets.xcassets */; };
+		845DE3FB2BCE99C2006BFFC7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3FA2BCE99C2006BFFC7 /* LoginView.swift */; };
+		845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3FE2BCE9A10006BFFC7 /* MyBicycleView.swift */; };
+		845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4002BCE9A5D006BFFC7 /* MainStoreView.swift */; };
+		845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4022BCE9A83006BFFC7 /* ProfileView.swift */; };
+		845DE4092BCE9C66006BFFC7 /* ShortcutUI in Frameworks */ = {isa = PBXBuildFile; productRef = 845DE4082BCE9C66006BFFC7 /* ShortcutUI */; };
+		845DE40C2BCE9FC6006BFFC7 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE40B2BCE9FC6006BFFC7 /* AppConfig.swift */; };
+		845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */; };
+		845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */; };
+		848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690B82BCFBF690079FE74 /* Color+Extensions.swift */; };
+		84B292412BCFAC2B00FD65C0 /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */; };
+		84B292432BCFACA700FD65C0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292422BCFACA700FD65C0 /* Core */; };
+		84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B292442BCFAFA700FD65C0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +31,16 @@
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845DE3F22BCD187F006BFFC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		845DE3FA2BCE99C2006BFFC7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		845DE3FE2BCE9A10006BFFC7 /* MyBicycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBicycleView.swift; sourceTree = "<group>"; };
+		845DE4002BCE9A5D006BFFC7 /* MainStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoreView.swift; sourceTree = "<group>"; };
+		845DE4022BCE9A83006BFFC7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		845DE40A2BCE9E46006BFFC7 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = ../../Core; sourceTree = "<group>"; };
+		845DE40B2BCE9FC6006BFFC7 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		848690B82BCFBF690079FE74 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		84B292442BCFAFA700FD65C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845DE4092BCE9C66006BFFC7 /* ShortcutUI in Frameworks */,
+				84B292412BCFAC2B00FD65C0 /* ShortcutFoundation in Frameworks */,
+				84B292432BCFACA700FD65C0 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +62,7 @@
 			children = (
 				845DE3EA2BCD187E006BFFC7 /* Sportson POC */,
 				845DE3E92BCD187E006BFFC7 /* Products */,
+				845DE4152BCEB0D5006BFFC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +77,15 @@
 		845DE3EA2BCD187E006BFFC7 /* Sportson POC */ = {
 			isa = PBXGroup;
 			children = (
+				845DE40A2BCE9E46006BFFC7 /* Core */,
+				845DE4122BCEAB58006BFFC7 /* ViewModels */,
+				845DE3F92BCE99A8006BFFC7 /* Views */,
 				845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */,
-				845DE3ED2BCD187E006BFFC7 /* ContentView.swift */,
+				845DE40B2BCE9FC6006BFFC7 /* AppConfig.swift */,
+				848690B92BCFBF690079FE74 /* Extensions */,
+				845DE4182BCEBBF8006BFFC7 /* Fonts */,
 				845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */,
+				84B292442BCFAFA700FD65C0 /* Images.xcassets */,
 				845DE3F12BCD187F006BFFC7 /* Preview Content */,
 			);
 			path = "Sportson POC";
@@ -65,6 +97,65 @@
 				845DE3F22BCD187F006BFFC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		845DE3F92BCE99A8006BFFC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				845DE3ED2BCD187E006BFFC7 /* ContentView.swift */,
+				845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */,
+				845DE40D2BCEAA85006BFFC7 /* Login */,
+				845DE40F2BCEAAB5006BFFC7 /* Tabs */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		845DE40D2BCEAA85006BFFC7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				845DE3FA2BCE99C2006BFFC7 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		845DE40F2BCEAAB5006BFFC7 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				845DE3FE2BCE9A10006BFFC7 /* MyBicycleView.swift */,
+				845DE4002BCE9A5D006BFFC7 /* MainStoreView.swift */,
+				845DE4022BCE9A83006BFFC7 /* ProfileView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		845DE4122BCEAB58006BFFC7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		845DE4152BCEB0D5006BFFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845DE4182BCEBBF8006BFFC7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		848690B92BCFBF690079FE74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				848690B82BCFBF690079FE74 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +174,11 @@
 			dependencies = (
 			);
 			name = "Sportson POC";
+			packageProductDependencies = (
+				845DE4082BCE9C66006BFFC7 /* ShortcutUI */,
+				84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */,
+				84B292422BCFACA700FD65C0 /* Core */,
+			);
 			productName = "Sportson POC";
 			productReference = 845DE3E82BCD187E006BFFC7 /* Sportson POC.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +207,10 @@
 				Base,
 			);
 			mainGroup = 845DE3DF2BCD187E006BFFC7;
+			packageReferences = (
+				845DE4042BCE9C00006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */,
+				845DE4072BCE9C66006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-swiftui-ios" */,
+			);
 			productRefGroup = 845DE3E92BCD187E006BFFC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */,
 				845DE3F32BCD187F006BFFC7 /* Preview Assets.xcassets in Resources */,
 				845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +238,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845DE3FB2BCE99C2006BFFC7 /* LoginView.swift in Sources */,
+				845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */,
+				845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */,
+				845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */,
 				845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */,
+				848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */,
+				845DE40C2BCE9FC6006BFFC7 /* AppConfig.swift in Sources */,
+				845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */,
+				845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */,
 				845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +384,13 @@
 				DEVELOPMENT_TEAM = P4KHK354DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to register a product";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +398,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcog.shortcut.Sportson-POC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,11 +419,13 @@
 				DEVELOPMENT_TEAM = P4KHK354DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to register a product";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +433,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcog.shortcut.Sportson-POC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -344,6 +465,42 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		845DE4042BCE9C00006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:shortcut/shortcut-foundation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		845DE4072BCE9C66006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-swiftui-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:shortcut/shortcut-swiftui-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		845DE4082BCE9C66006BFFC7 /* ShortcutUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 845DE4072BCE9C66006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-swiftui-ios" */;
+			productName = ShortcutUI;
+		};
+		84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 845DE4042BCE9C00006BFFC7 /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */;
+			productName = ShortcutFoundation;
+		};
+		84B292422BCFACA700FD65C0 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 845DE3E02BCD187E006BFFC7 /* Project object */;
 }

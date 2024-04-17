@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import ShortcutFoundation
 
 @main
 struct Sportson_POCApp: App {
+    let context = Context(AppConfig())
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

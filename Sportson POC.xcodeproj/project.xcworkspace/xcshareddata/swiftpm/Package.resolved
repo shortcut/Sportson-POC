@@ -1,0 +1,24 @@
+{
+  "originHash" : "2a19f187152d71f2f4261d603deb927da7ee7060cb23f813b9f3ab0f21e490e2",
+  "pins" : [
+    {
+      "identity" : "shortcut-foundation-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:shortcut/shortcut-foundation-ios.git",
+      "state" : {
+        "revision" : "49cf3ee7078994f80e1b726c106081ec6d878e20",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "shortcut-swiftui-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:shortcut/shortcut-swiftui-ios.git",
+      "state" : {
+        "revision" : "f5cc80ebcb3b74c5fbb06c7cc74cab427604f62d",
+        "version" : "1.0.7"
+      }
+    }
+  ],
+  "version" : 3
+}
