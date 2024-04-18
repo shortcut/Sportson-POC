@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841406152BD126BD00F4D73C /* ShopViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406142BD126BD00F4D73C /* ShopViewModal.swift */; };
+		841406172BD1501C00F4D73C /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 841406162BD1501C00F4D73C /* video.mp4 */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		841406142BD126BD00F4D73C /* ShopViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModal.swift; sourceTree = "<group>"; };
+		841406162BD1501C00F4D73C /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */,
 				84B292442BCFAFA700FD65C0 /* Images.xcassets */,
+				841406162BD1501C00F4D73C /* video.mp4 */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */,
 				845DE3F32BCD187F006BFFC7 /* Preview Assets.xcassets in Resources */,
 				845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */,
+				841406172BD1501C00F4D73C /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
