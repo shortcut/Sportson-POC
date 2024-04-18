@@ -11,9 +11,12 @@ import ShortcutUI
 struct FakeNavBarModifier: ViewModifier {
     var title: String
     func body(content: Content) -> some View {
-        ZStack(alignment: .top) {
+        ZStack {
             content
-            navbar(title: title)
+            VStack {
+                navbar(title: title)
+                Spacer()
+            }
         }
     }
 
@@ -40,8 +43,8 @@ struct FakeNavBarModifier: ViewModifier {
                    height: 40)
             .foregroundColor(.yellow)
         }
-        .frame(maxHeight: 140)
         .background(title.isEmpty ? Color.mainBg : .black)
+        .frame(maxHeight: 120)
     }
 }
 

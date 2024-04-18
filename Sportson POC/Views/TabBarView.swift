@@ -22,7 +22,7 @@ struct TabBarView: View {
                         .tag(tab.rawValue)
                 }
             }
-            ZStack {
+//            ZStack {
                 HStack {
                     ForEach((vm.tabs), id: \.self){ item in
                         Button{
@@ -33,18 +33,21 @@ struct TabBarView: View {
                     }
                 }
                 .padding(6)
-            }
+//            }
             .frame(height: 55)
             .background(Color.darkBg)
             .cornerRadius(27)
             .padding(.horizontal, 16)
-            .onAppear(perform: {
-                vm.selectedTab = 0
-            })
-            .onReceive(NotificationCenter.didRegisterBike) { _ in
-                self.store.didRegisterBike = true
-                self.store.isBikeRegistered = true
-            }
+        }
+        .onAppear(perform: {
+            vm.selectedTab = 0
+        })
+        .onReceive(NotificationCenter.didRegisterBike) { _ in
+            self.store.didRegisterBike = true
+            self.store.isBikeRegistered = true
+        }
+        .sheet(isPresented: $store.shouldPresentCategoryShop) {
+            ShopViewModal(currentType: store.currentCategory)
         }
     }
 

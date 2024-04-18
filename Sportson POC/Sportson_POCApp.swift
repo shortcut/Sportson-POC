@@ -15,6 +15,17 @@ struct Sportson_POCApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()        }
+            ContentView()
+                .onAppear(perform: {
+                    setTabbarAppeareance()
+                })
+        }
     }
+
+    private func setTabbarAppeareance() {
+        let apparence = UITabBarAppearance()
+        apparence.configureWithTransparentBackground()
+        UITabBar.appearance().scrollEdgeAppearance = apparence
+    }
+
 }

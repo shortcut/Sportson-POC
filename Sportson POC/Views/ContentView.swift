@@ -18,7 +18,7 @@ struct ContentView: View {
                 .background(Color.mainBg)
         } else {
             LoginView()
-                .background(Color.mainBg)
+                .background(Color.darkBg)
         }
     }
 }

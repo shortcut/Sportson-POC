@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841406152BD126BD00F4D73C /* ShopViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406142BD126BD00F4D73C /* ShopViewModal.swift */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -25,12 +26,14 @@
 		848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */; };
 		848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */; };
 		848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
+		848690CA2BD1097E0079FE74 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C92BD1097E0079FE74 /* CategoryView.swift */; };
 		84B292412BCFAC2B00FD65C0 /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */; };
 		84B292432BCFACA700FD65C0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292422BCFACA700FD65C0 /* Core */; };
 		84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B292442BCFAFA700FD65C0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841406142BD126BD00F4D73C /* ShopViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModal.swift; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 		848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		848690C62BCFF3640079FE74 /* FakeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavBar.swift; sourceTree = "<group>"; };
+		848690C92BD1097E0079FE74 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		84B292442BCFAFA700FD65C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841406132BD126A500F4D73C /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				841406142BD126BD00F4D73C /* ShopViewModal.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
 		845DE3DF2BCD187E006BFFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,8 @@
 		845DE3F92BCE99A8006BFFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				841406132BD126A500F4D73C /* Modals */,
+				848690C82BD109430079FE74 /* Subviews */,
 				845DE3ED2BCD187E006BFFC7 /* ContentView.swift */,
 				845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */,
 				845DE40D2BCEAA85006BFFC7 /* Login */,
@@ -197,6 +211,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		848690C82BD109430079FE74 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				848690C92BD1097E0079FE74 /* CategoryView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,12 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841406152BD126BD00F4D73C /* ShopViewModal.swift in Sources */,
 				845DE3FB2BCE99C2006BFFC7 /* LoginView.swift in Sources */,
 				845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */,
 				845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */,
 				845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */,
 				848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */,
 				845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */,
+				848690CA2BD1097E0079FE74 /* CategoryView.swift in Sources */,
 				848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */,
 				848690BE2BCFC1020079FE74 /* NotificationCenter+Extension.swift in Sources */,
 				848690BC2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift in Sources */,
