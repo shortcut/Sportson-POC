@@ -14,6 +14,8 @@ struct MainStoreView: View {
             Rectangle()
                 .frame(height: 120)
                 .background(Color.clear)
+            Rectangle().fill(.clear)
+                .frame(height: 100)
             ScrollView(showsIndicators: false) {
                 VStack {
                     Text("Bikes")
@@ -46,8 +48,8 @@ struct MainStoreView: View {
 //                .frame(height: UIScreen.main.bounds.size.height)
 //                .padding(.bottom, 70)
             }
-            Rectangle().fill(.clear)
-                .frame(height: 100)
+//            Rectangle().fill(.clear)
+//                .frame(height: 100)
         }
         .frame(height: UIScreen.main.bounds.size.height)
         .background(Color.mainBg)

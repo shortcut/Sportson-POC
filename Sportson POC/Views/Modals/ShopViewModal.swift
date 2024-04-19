@@ -41,13 +41,13 @@ struct ShopViewModal: View {
                             Text("Brand: \(item.brand)")
                         }
                     }
-                        .frame(minHeight: 200) // Minimum height for each cell
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10) // Define the shape of the overlay
-                                .stroke(Color.black, lineWidth: 1)  // Set the color and line width of the border
-                        )
-                        .cornerRadius(10)
+                    .frame(minHeight: 200) // Minimum height for each cell
+                    .frame(maxWidth: .infinity)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    .cornerRadius(10)
                 }
             }
             .padding() // Padding around the grid

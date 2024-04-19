@@ -22,18 +22,16 @@ struct TabBarView: View {
                         .tag(tab.rawValue)
                 }
             }
-//            ZStack {
-                HStack {
-                    ForEach((vm.tabs), id: \.self){ item in
-                        Button{
-                            vm.selectedTab = item.rawValue
-                        } label: {
-                            CustomTabItem(imageName: item.asset, title: item.title, isActive: (vm.selectedTab == item.rawValue))
-                        }
+            HStack {
+                ForEach((vm.tabs), id: \.self){ item in
+                    Button{
+                        vm.selectedTab = item.rawValue
+                    } label: {
+                        CustomTabItem(imageName: item.asset, title: item.title, isActive: (vm.selectedTab == item.rawValue))
                     }
                 }
-                .padding(6)
-//            }
+            }
+            .padding(6)
             .frame(height: 55)
             .background(Color.darkBg)
             .cornerRadius(27)

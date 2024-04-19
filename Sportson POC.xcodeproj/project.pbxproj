@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		841406152BD126BD00F4D73C /* ShopViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406142BD126BD00F4D73C /* ShopViewModal.swift */; };
 		841406172BD1501C00F4D73C /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 841406162BD1501C00F4D73C /* video.mp4 */; };
+		8414061D2BD240CD00F4D73C /* sportson.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841406182BD240CD00F4D73C /* sportson.ttf */; };
+		8414061E2BD240CD00F4D73C /* FSEmericWeb-CoreItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841406192BD240CD00F4D73C /* FSEmericWeb-CoreItalic.ttf */; };
+		8414061F2BD240CD00F4D73C /* FSEmericWeb-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061A2BD240CD00F4D73C /* FSEmericWeb-Book.ttf */; };
+		841406202BD240CD00F4D73C /* FSEmericWeb-Core.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061B2BD240CD00F4D73C /* FSEmericWeb-Core.ttf */; };
+		841406212BD240CD00F4D73C /* FSEmericWeb-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061C2BD240CD00F4D73C /* FSEmericWeb-Medium.ttf */; };
+		841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406232BD241EF00F4D73C /* Font+Extension.swift */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -36,6 +42,13 @@
 /* Begin PBXFileReference section */
 		841406142BD126BD00F4D73C /* ShopViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModal.swift; sourceTree = "<group>"; };
 		841406162BD1501C00F4D73C /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		841406182BD240CD00F4D73C /* sportson.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sportson.ttf; sourceTree = "<group>"; };
+		841406192BD240CD00F4D73C /* FSEmericWeb-CoreItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FSEmericWeb-CoreItalic.ttf"; sourceTree = "<group>"; };
+		8414061A2BD240CD00F4D73C /* FSEmericWeb-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FSEmericWeb-Book.ttf"; sourceTree = "<group>"; };
+		8414061B2BD240CD00F4D73C /* FSEmericWeb-Core.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FSEmericWeb-Core.ttf"; sourceTree = "<group>"; };
+		8414061C2BD240CD00F4D73C /* FSEmericWeb-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FSEmericWeb-Medium.ttf"; sourceTree = "<group>"; };
+		841406222BD2412C00F4D73C /* Sportson-POC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Sportson-POC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		841406232BD241EF00F4D73C /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +114,7 @@
 		845DE3EA2BCD187E006BFFC7 /* Sportson POC */ = {
 			isa = PBXGroup;
 			children = (
+				841406222BD2412C00F4D73C /* Sportson-POC-Info.plist */,
 				845DE40A2BCE9E46006BFFC7 /* Core */,
 				845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */,
 				845DE40B2BCE9FC6006BFFC7 /* AppConfig.swift */,
@@ -173,6 +187,11 @@
 		845DE4182BCEBBF8006BFFC7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8414061A2BD240CD00F4D73C /* FSEmericWeb-Book.ttf */,
+				8414061B2BD240CD00F4D73C /* FSEmericWeb-Core.ttf */,
+				841406192BD240CD00F4D73C /* FSEmericWeb-CoreItalic.ttf */,
+				8414061C2BD240CD00F4D73C /* FSEmericWeb-Medium.ttf */,
+				841406182BD240CD00F4D73C /* sportson.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 				848690B82BCFBF690079FE74 /* Color+Extensions.swift */,
 				848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */,
 				848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */,
+				841406232BD241EF00F4D73C /* Font+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,9 +309,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414061D2BD240CD00F4D73C /* sportson.ttf in Resources */,
 				84B292452BCFAFA700FD65C0 /* Images.xcassets in Resources */,
+				841406212BD240CD00F4D73C /* FSEmericWeb-Medium.ttf in Resources */,
+				841406202BD240CD00F4D73C /* FSEmericWeb-Core.ttf in Resources */,
 				845DE3F32BCD187F006BFFC7 /* Preview Assets.xcassets in Resources */,
+				8414061F2BD240CD00F4D73C /* FSEmericWeb-Book.ttf in Resources */,
 				845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */,
+				8414061E2BD240CD00F4D73C /* FSEmericWeb-CoreItalic.ttf in Resources */,
 				841406172BD1501C00F4D73C /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +342,7 @@
 				848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */,
 				845DE40C2BCE9FC6006BFFC7 /* AppConfig.swift in Sources */,
 				845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */,
+				841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */,
 				845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */,
 				848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */,
 				845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */,
@@ -456,6 +482,7 @@
 				DEVELOPMENT_TEAM = P4KHK354DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sportson-POC-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to register a product";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,6 +518,7 @@
 				DEVELOPMENT_TEAM = P4KHK354DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sportson-POC-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to use the camera to register a product";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
