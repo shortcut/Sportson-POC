@@ -20,6 +20,10 @@ struct ShopViewModal: View {
 
     var body: some View {
         VStack {
+            RoundedRectangle(cornerRadius: 3)
+                .fill(.gray.opacity(0.5))
+                .frame(width: 45, height: 6)
+                .padding(.top, 8)
             HStack {
                 Text(store.currentCategoryTitle.uppercased())
                     .font(.emBold(size: 26))

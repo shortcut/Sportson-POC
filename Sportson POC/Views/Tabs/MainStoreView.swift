@@ -63,8 +63,10 @@ struct MainStoreView: View {
                 }
             }
             .padding(.vertical, 16)
-            Rectangle().fill(.gray.opacity(0.7))
-                .frame(width: .infinity, height: 1)
+            DottedLine()
+                .stroke(style: .init(dash: [10]))
+                .foregroundStyle(.gray.opacity(0.5))
+                            .frame(height: 1)
         }
         .frame(height: 60)
         .onTapGesture {

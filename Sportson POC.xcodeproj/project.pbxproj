@@ -17,6 +17,7 @@
 		841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406232BD241EF00F4D73C /* Font+Extension.swift */; };
 		841406262BD25FB900F4D73C /* RoundedCardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406252BD25FB900F4D73C /* RoundedCardModifier.swift */; };
 		841406282BD27C0F00F4D73C /* MyBikeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406272BD27C0F00F4D73C /* MyBikeModal.swift */; };
+		8414062A2BD28C5300F4D73C /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406292BD28C5300F4D73C /* DottedLine.swift */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		841406232BD241EF00F4D73C /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		841406252BD25FB900F4D73C /* RoundedCardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCardModifier.swift; sourceTree = "<group>"; };
 		841406272BD27C0F00F4D73C /* MyBikeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBikeModal.swift; sourceTree = "<group>"; };
+		841406292BD28C5300F4D73C /* DottedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				848690C92BD1097E0079FE74 /* CategoryView.swift */,
+				841406292BD28C5300F4D73C /* DottedLine.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */,
 				841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */,
 				845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */,
+				8414062A2BD28C5300F4D73C /* DottedLine.swift in Sources */,
 				848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */,
 				845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */,
 			);
