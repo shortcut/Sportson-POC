@@ -146,10 +146,10 @@
 		845DE3F92BCE99A8006BFFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				841406132BD126A500F4D73C /* Modals */,
-				848690C82BD109430079FE74 /* Subviews */,
 				845DE3ED2BCD187E006BFFC7 /* ContentView.swift */,
 				845DE4102BCEAB1B006BFFC7 /* TabBarView.swift */,
+				841406132BD126A500F4D73C /* Modals */,
+				848690C82BD109430079FE74 /* Subviews */,
 				845DE40D2BCEAA85006BFFC7 /* Login */,
 				845DE40F2BCEAAB5006BFFC7 /* Tabs */,
 			);

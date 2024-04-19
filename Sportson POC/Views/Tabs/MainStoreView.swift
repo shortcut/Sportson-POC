@@ -46,7 +46,7 @@ struct MainStoreView: View {
             }
         }
         .modifier(BackgroundModifier())
-        .modifier(FakeNavBarModifier(icon: "k", title: "Butik"))
+        .modifier(FakeNavBarModifier(icon: "c", title: "Butik"))
     }
 
     @ViewBuilder
