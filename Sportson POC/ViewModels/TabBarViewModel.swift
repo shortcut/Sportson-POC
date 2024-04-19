@@ -29,17 +29,17 @@ extension TabBarViewModel.Tab: Identifiable {
 
     var title: String {
         switch self {
-        case .myBike: "My Bike"
-        case .store: "Store"
-        case .profile: "Profile"
+        case .myBike: "Mina Cyklar"
+        case .store: "Butik"
+        case .profile: "Min Profil"
         }
     }
 
     var asset: String {
         switch self {
-        case .myBike: "bicycle.circle"
-        case .store: "storefront.circle"
-        case .profile: "person.crop.circle"
+        case .myBike: "b"
+        case .store: "c"
+        case .profile: "k"
         }
     }
 }

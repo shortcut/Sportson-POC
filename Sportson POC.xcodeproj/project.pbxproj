@@ -15,6 +15,8 @@
 		841406202BD240CD00F4D73C /* FSEmericWeb-Core.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061B2BD240CD00F4D73C /* FSEmericWeb-Core.ttf */; };
 		841406212BD240CD00F4D73C /* FSEmericWeb-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061C2BD240CD00F4D73C /* FSEmericWeb-Medium.ttf */; };
 		841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406232BD241EF00F4D73C /* Font+Extension.swift */; };
+		841406262BD25FB900F4D73C /* RoundedCardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406252BD25FB900F4D73C /* RoundedCardModifier.swift */; };
+		841406282BD27C0F00F4D73C /* MyBikeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406272BD27C0F00F4D73C /* MyBikeModal.swift */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -31,7 +33,7 @@
 		848690BC2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */; };
 		848690BE2BCFC1020079FE74 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */; };
 		848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */; };
-		848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */; };
+		848690C52BCFE4FF0079FE74 /* CapsuleButtonYellowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C42BCFE4FF0079FE74 /* CapsuleButtonYellowStyle.swift */; };
 		848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
 		848690CA2BD1097E0079FE74 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C92BD1097E0079FE74 /* CategoryView.swift */; };
 		84B292412BCFAC2B00FD65C0 /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 84B292402BCFAC2B00FD65C0 /* ShortcutFoundation */; };
@@ -49,6 +51,8 @@
 		8414061C2BD240CD00F4D73C /* FSEmericWeb-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FSEmericWeb-Medium.ttf"; sourceTree = "<group>"; };
 		841406222BD2412C00F4D73C /* Sportson-POC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Sportson-POC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		841406232BD241EF00F4D73C /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		841406252BD25FB900F4D73C /* RoundedCardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCardModifier.swift; sourceTree = "<group>"; };
+		841406272BD27C0F00F4D73C /* MyBikeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBikeModal.swift; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		848690BB2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notificationcenter.Name+Extension.swift"; sourceTree = "<group>"; };
 		848690BD2BCFC1020079FE74 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
-		848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		848690C42BCFE4FF0079FE74 /* CapsuleButtonYellowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonYellowStyle.swift; sourceTree = "<group>"; };
 		848690C62BCFF3640079FE74 /* FakeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavBar.swift; sourceTree = "<group>"; };
 		848690C92BD1097E0079FE74 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		84B292442BCFAFA700FD65C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				841406142BD126BD00F4D73C /* ShopViewModal.swift */,
+				841406272BD27C0F00F4D73C /* MyBikeModal.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			children = (
 				848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */,
 				848690C62BCFF3640079FE74 /* FakeNavBar.swift */,
+				841406252BD25FB900F4D73C /* RoundedCardModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -229,7 +235,7 @@
 		848690C32BCFE4CD0079FE74 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				848690C42BCFE4FF0079FE74 /* CapsuleButtonStyle.swift */,
+				848690C42BCFE4FF0079FE74 /* CapsuleButtonYellowStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -332,11 +338,13 @@
 				845DE3FB2BCE99C2006BFFC7 /* LoginView.swift in Sources */,
 				845DE4142BCEAB8E006BFFC7 /* TabBarViewModel.swift in Sources */,
 				845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */,
+				841406262BD25FB900F4D73C /* RoundedCardModifier.swift in Sources */,
 				845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */,
+				841406282BD27C0F00F4D73C /* MyBikeModal.swift in Sources */,
 				848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */,
 				845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */,
 				848690CA2BD1097E0079FE74 /* CategoryView.swift in Sources */,
-				848690C52BCFE4FF0079FE74 /* CapsuleButtonStyle.swift in Sources */,
+				848690C52BCFE4FF0079FE74 /* CapsuleButtonYellowStyle.swift in Sources */,
 				848690BE2BCFC1020079FE74 /* NotificationCenter+Extension.swift in Sources */,
 				848690BC2BCFBFF80079FE74 /* Notificationcenter.Name+Extension.swift in Sources */,
 				848690BA2BCFBF690079FE74 /* Color+Extensions.swift in Sources */,

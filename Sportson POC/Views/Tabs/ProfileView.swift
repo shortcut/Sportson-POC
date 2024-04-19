@@ -13,46 +13,76 @@ struct ProfileView: View {
     @InjectObject var store: Store
 
     var body: some View {
-        VStack {
-            Rectangle()
-                .frame(height: 120)
-                .background(Color.clear)
-            listItem("Settings")
-            listItem("Notifications")
-            listItem("Request Service")
-            listItem("About us")
-            listItem("Privacy Policy")
-            listItem("Terms & Conditions")
-            listItem("Log out")
-                .onTapGesture {
-                    store.isUserLogged = false
-                    store.userDidLogin = false
-                }
-            Spacer()
+        VStack(spacing: 20) {
+            Group {
+                userCard()
+                companyCard()
+            }
+            .padding(.horizontal, 16)
         }
-        .frame(width: UIScreen.main.bounds.size.width,
-               height: UIScreen.main.bounds.size.height)
-        .background(Color.mainBg)
-        .modifier(FakeNavBarModifier(title: "YOUR PROFILE"))
+        .modifier(BackgroundModifier())
+        .modifier(FakeNavBarModifier(icon: "k", title: "Min Profil"))
     }
 
     @ViewBuilder
-    func listItem(_ text: String) -> some View {
+    func userCard() -> some View {
+        VStack {
+            Group {
+                HStack {
+                    Text("Anne-Marie Svensson")
+                        .font(.emBold(size: 26))
+                    Spacer()
+                }
+                .padding(.top, 16)
+                itemSelection("Inställingar")
+                itemSelection("Logga ut")
+                    .onTapGesture {
+                        store.isUserLogged = false
+                        store.userDidLogin = false
+                    }
+            }
+            .padding(.horizontal, 16)
+        }
+        .modifier(RoundedCardModifier())
+    }
+
+    @ViewBuilder
+    func companyCard() -> some View {
+        VStack {
+            Group {
+                HStack {
+                    Text("Sportson")
+                        .font(.emBold(size: 26))
+                    Spacer()
+                }
+                .padding(.top, 16)
+                itemSelection("Integritetspolicy")
+                itemSelection("Vilkor")
+                itemSelection("Om oss")
+            }
+            .padding(.horizontal, 16)
+        }
+        .modifier(RoundedCardModifier())
+    }
+
+    @ViewBuilder
+    func itemSelection(_ text: String) -> some View {
         VStack(spacing: 0) {
             HStack {
                 Text(text)
-                    .padding(.leading, 16)
-                    .foregroundColor(.yellow)
+                    .font(.emRegular(size: 16))
                 Spacer()
-                Image(systemName: "chevron.right")
-                    .padding(.trailing, 16)
-                    .foregroundColor(.yellow)
+                ZStack {
+                    Circle().fill(Color.spYellow)
+                        .frame(width: 30, height: 30)
+                    Image(systemName: "chevron.right")
+                }
             }
-            .frame(height: 80)
-            Rectangle().fill(.yellow)
-                .frame(width: .infinity, height: 2)
-                .padding(.horizontal, 16)
+            .padding(.vertical, 16)
+            Rectangle().fill(.gray.opacity(0.7))
+                .frame(width: .infinity, height: 1)
         }
+        .frame(height: 60)
     }
 }
 

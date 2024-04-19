@@ -26,20 +26,24 @@ struct LoginView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack {
-                    Spacer()
                     Image("sportson_logo_big")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.size.width * 0.75,
+                               height: 90)
+                        .scaledToFit()
+                        .padding(.top, 80)
                     Spacer()
                     Button(action:  {
                         store.isUserLogged = true
                         store.userDidLogin = true
                     },label: {
-                        Text("LOGIN")
+                        Text("Logga In")
+                            .font(.emRegular(size: 22))
                             .frame(width: UIScreen.main.bounds.size.width * 0.7)
                     })
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .buttonStyle(CapsuleButtonStyle())
-                    .padding(.bottom, 120)
+                    .frame(height: 75)
+                    .buttonStyle(CapsuleButtonYellowStyle())
+                    .padding(.bottom, 100)
                 }
                 .frame(width: UIScreen.main.bounds.size.width)
             }

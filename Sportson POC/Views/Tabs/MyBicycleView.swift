@@ -15,14 +15,28 @@ struct MyBicycleView: View {
     @State private var selectedImage: UIImage?
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack() {
             if store.isBikeRegistered || store.didRegisterBike {
-                myBikeView
+                    bikeDetailView()
+                        .padding(.horizontal, 16)
+                        .padding(.top, 70)
+                    Button(action:  { },label: {
+                        HStack {
+                            Image(systemName: "slider.horizontal.3")
+                                .foregroundColor(.gray)
+                            Text("Ändra innehåll")
+                                .font(.emRegular(size: 14))
+                                .foregroundColor(.gray)
+                        }
+                    })
+                    .frame(height: 50)
+                    .buttonStyle(CapsuleButtonClearStyle())
             } else {
                 emptyStateView
             }
         }
-        .modifier(FakeNavBarModifier(title: "MY BIKE"))
+        .modifier(BackgroundModifier())
+        .modifier(FakeNavBarModifier(icon: "b", title: "Mina Cyklar"))
     }
 
     var emptyStateView: some View {
@@ -31,28 +45,73 @@ struct MyBicycleView: View {
                 self.showCamera.toggle()
             },label: {
                 HStack {
-                    Image(systemName: "bicycle")
-                    Text("REGISTER BIKE")
+                    Text("b")
+                        .font(.sportson(size: 32))
+                    Text("Lägg till ny cykel")
+                        .font(.emRegular(size: 22))
                 }
+                .frame(width: UIScreen.main.bounds.size.width * 0.8)
             })
-            .font(.title2)
-            .fontWeight(.semibold)
-            .buttonStyle(CapsuleButtonStyle())
+            .padding(.top, 140)
+            .buttonStyle(CapsuleButtonYellowStyle())
             .fullScreenCover(isPresented: self.$showCamera) {
                 accessCameraView(selectedImage: self.$selectedImage)
                     .ignoresSafeArea(.all)
             }
         }
-        .modifier(BackgroundModifier())
     }
 
-    var myBikeView: some View {
+    @ViewBuilder
+    func bikeDetailView() -> some View {
         VStack {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    Text("Cresent".uppercased())
+                        .font(.emSemiBold(size: 14))
+                    Text("Elina")
+                        .font(.emBold(size: 26))
+                }
+                .foregroundColor(.black)
+                Spacer()
+                Text("Ramnummer: 53456610")
+                    .font(.emRegular(size: 14))
+                    .foregroundStyle(.gray)
+            }
+            .padding(.top, 8)
             Image("myBike")
                 .resizable()
                 .scaledToFit()
+
+            myBikeSelection("Produktinformation")
+            myBikeSelection("Teknisk specifikation")
+            myBikeSelection("Tillbehör")
+                .onTapGesture {
+                    store.shouldPresentBikeModal = true
+                }
+            myBikeSelection("Boka cykelservice")
         }
-        .modifier(BackgroundModifier())
+        .padding(.horizontal, 16)
+        .modifier(RoundedCardModifier())
+    }
+
+    @ViewBuilder
+    func myBikeSelection(_ text: String) -> some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text(text)
+                    .font(.emRegular(size: 16))
+                Spacer()
+                ZStack {
+                    Circle().fill(Color.spYellow)
+                        .frame(width: 30, height: 30)
+                    Image(systemName: "chevron.right")
+                }
+            }
+            .padding(.vertical, 16)
+            Rectangle().fill(.gray.opacity(0.7))
+                .frame(width: .infinity, height: 1)
+        }
+        .frame(height: 60)
     }
 }
 

@@ -35,10 +35,10 @@ struct CategoryView: View {
             RoundedRectangle(cornerRadius: 10) // Define the shape of the overlay
                 .stroke(Color.yellow, lineWidth: 2)  // Set the color and line width of the border
         )
-        .onTapGesture {
-            store.shouldPresentCategoryShop = true
-            store.currentCategory = PartType.typeFrom(text)
-        }
+//        .onTapGesture {
+//            store.shouldPresentCategoryShop = true
+//            store.currentCategory = PartType.typeFrom(text)
+//        }
     }
 }
 

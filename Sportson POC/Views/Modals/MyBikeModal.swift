@@ -1,27 +1,25 @@
 //
-//  ShopViewModal.swift
+//  MyBikeModal.swift
 //  Sportson POC
 //
-//  Created by Marco-Shortcut on 18. 4. 2024..
+//  Created by Marco-Shortcut on 19. 4. 2024..
 //
 
 import SwiftUI
 import ShortcutFoundation
 import Core
 
-struct ShopViewModal: View {
+struct MyBikeModal: View {
     @InjectObject var store: Store
 
-    var currentType: PartType
-
     var items: [BikePart] {
-        BikePart.allParts().filter { $0.type == currentType }
+        BikePart.defaultOwnedparts()
     }
 
     var body: some View {
         VStack {
             HStack {
-                Text(store.currentCategoryTitle.uppercased())
+                Text("Min Cykel")
                     .font(.emBold(size: 26))
                 Spacer()
             }

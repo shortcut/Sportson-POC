@@ -6,54 +6,72 @@
 //
 
 import SwiftUI
+import ShortcutFoundation
 import Core
 
 struct MainStoreView: View {
+    @InjectObject var store: Store
     var body: some View {
         VStack(spacing: 0) {
-            Rectangle()
-                .frame(height: 120)
-                .background(Color.clear)
-            Rectangle().fill(.clear)
-                .frame(height: 100)
-            ScrollView(showsIndicators: false) {
+            VStack {
+                Rectangle().fill(.clear)
+                    .frame(height: 140)
                 VStack {
-                    Text("Bikes")
-                        .font(.system(.headline).bold())
-                        .foregroundStyle(.yellow)
-                        .padding(.top, 16)
-                    HStack(spacing: 16) {
-                        CategoryView(image: "bicycle", text: "Bikes")
+                    HStack {
+                        Text("Kategorier")
+                            .font(.emBold(size: 26))
+                        Spacer()
                     }
-
-                    Text("Bike parts")
-                        .font(.system(.headline).bold())
-                        .foregroundStyle(.yellow)
-                        .padding(.top, 16)
-                    HStack(spacing: 16) {
-                        CategoryView(image: "bicycle", text: PartType.frame.rawValue.capitalized)
-                        CategoryView(image: "bicycle", text: PartType.tires.rawValue.capitalized)
-                    }
-
-                    HStack(spacing: 16) {
-                        CategoryView(image: "bicycle", text: PartType.wheels.rawValue.capitalized)
-                        CategoryView(image: "bicycle", text: PartType.pedals.rawValue.capitalized)
-                    }
-
-                    HStack(spacing: 16) {
-                        CategoryView(image: "bicycle", text: PartType.saddle.rawValue.capitalized)
-                        CategoryView(image: "bicycle", text: PartType.handlebar.rawValue.capitalized)
+                    .padding(.horizontal, 16)
+                    .padding(.top, 16)
+                    ScrollView(showsIndicators: false) {
+                        Group {
+                            categorySelection("Cykelbarnstolar")
+                            categorySelection("Barntillbehör")
+                            categorySelection("Cykelbelysning")
+                            categorySelection("Cykeldator")
+                            categorySelection("CykelDäck")
+                            categorySelection("Cykelflaskor och flaskhållar")
+                            categorySelection("Cykelglasögon")
+                            categorySelection("Cykelhandtag och styrlindor")
+                            categorySelection("CykelHjälmar")
+                            categorySelection("Cykelhjul")
+                        }
+                        .padding(.horizontal,16)
                     }
                 }
-//                .frame(height: UIScreen.main.bounds.size.height)
-//                .padding(.bottom, 70)
+                .modifier(RoundedCardModifier())
+                .padding(.top, 20)
+                .padding(.horizontal, 16)
             }
-//            Rectangle().fill(.clear)
-//                .frame(height: 100)
         }
-        .frame(height: UIScreen.main.bounds.size.height)
-        .background(Color.mainBg)
-        .modifier(FakeNavBarModifier(title: "STORE"))
+        .modifier(BackgroundModifier())
+        .modifier(FakeNavBarModifier(icon: "k", title: "Butik"))
+    }
+
+    @ViewBuilder
+    func categorySelection(_ text: String) -> some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text(text)
+                    .font(.emRegular(size: 16))
+                Spacer()
+                ZStack {
+                    Circle().fill(Color.spYellow)
+                        .frame(width: 30, height: 30)
+                    Image(systemName: "chevron.right")
+                }
+            }
+            .padding(.vertical, 16)
+            Rectangle().fill(.gray.opacity(0.7))
+                .frame(width: .infinity, height: 1)
+        }
+        .frame(height: 60)
+        .onTapGesture {
+            store.shouldPresentCategoryShop = true
+            store.currentCategoryTitle = text
+            store.currentCategory = PartType.allCases.randomElement() ?? .frame
+        }
     }
 }
 

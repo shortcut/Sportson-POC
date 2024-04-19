@@ -12,7 +12,7 @@ import Core
 struct TabBarView: View {
     @InjectObject var store: Store
     @InjectObject var vm: TabBarViewModel
-    private var activeTabButtonWidth = UIScreen.main.bounds.size.width * 0.5
+    private var activeTabButtonWidth = UIScreen.main.bounds.size.width * 0.4
 
     var body: some View {
         VStack(spacing: 0) {
@@ -47,6 +47,9 @@ struct TabBarView: View {
         .sheet(isPresented: $store.shouldPresentCategoryShop) {
             ShopViewModal(currentType: store.currentCategory)
         }
+        .sheet(isPresented: $store.shouldPresentBikeModal) {
+            MyBikeModal()
+        }
     }
 
     @ViewBuilder
@@ -66,23 +69,17 @@ struct TabBarView: View {
 extension TabBarView {
     func CustomTabItem(imageName: String, title: String, isActive: Bool) -> some View {
         HStack(spacing: 15){
-            Spacer()
-            Image(systemName: imageName)
-                .resizable()
-                .renderingMode(.template)
+            Text(imageName)
+                .font(.sportson(size: 32))
                 .foregroundColor(isActive ? .black : .gray)
-                .frame(width: 25, height: 25)
             if isActive{
                 Text(title)
-                    .textCase(.uppercase)
-                    .font(.system(size: 14))
-                    .fontWeight(.medium)
+                    .font(.emRegular(size: 14))
                     .foregroundColor(isActive ? .black : .gray)
             }
-            Spacer()
         }
-        .frame(width: isActive ? activeTabButtonWidth : 60, height: 45)
-        .background(isActive ? .yellow : .clear)
+        .frame(width: isActive ? activeTabButtonWidth : 80, height: 45)
+        .background(isActive ? Color.spYellow : .clear)
         .cornerRadius(30)
     }
 }
