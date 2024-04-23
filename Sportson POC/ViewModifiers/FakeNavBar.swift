@@ -42,7 +42,7 @@ struct FakeNavBarModifier: ViewModifier {
             .foregroundColor(Color.spYellow)
         }
         .background(Color.darkBg)
-        .frame(maxHeight: 140)
+        .frame(maxHeight: 80)
     }
 
     @ViewBuilder

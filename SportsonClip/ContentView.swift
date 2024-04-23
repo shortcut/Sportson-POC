@@ -1,18 +1,15 @@
 //
-//  MyBicycleView.swift
-//  Sportson POC
+//  ContentView.swift
+//  SportsonClip
 //
-//  Created by Marco-Shortcut on 16. 4. 2024..
+//  Created by Marco-Shortcut on 23. 4. 2024..
 //
 
 import SwiftUI
-import PhotosUI
 import Core
 
-struct MyBicycleView: View {
-    @EnvironmentObject var store: Store
-    @State private var showCamera = false
-    @State private var selectedImage: UIImage?
+struct ContentView: View {
+    @EnvironmentObject private var store: Store
 
     var body: some View {
         VStack() {
@@ -37,27 +34,22 @@ struct MyBicycleView: View {
         }
         .modifier(BackgroundModifier())
         .modifier(FakeNavBarModifier(icon: "b", title: "Mina Cyklar"))
+        .sheet(isPresented: $store.shouldPresentBikeModal) {
+            MyBikeModal()
+        }
     }
 
     var emptyStateView: some View {
         VStack {
-            Button(action:  {
-                self.showCamera.toggle()
-            },label: {
+            Button(action:  {},label: {
                 HStack {
-                    Text("b")
-                        .font(.sportson(size: 32))
-                    Text("Lägg till ny cykel")
+                    Text("Något gick fel!")
                         .font(.emRegular(size: 22))
                 }
                 .frame(width: UIScreen.main.bounds.size.width * 0.8)
             })
             .padding(.top, 140)
             .buttonStyle(CapsuleButtonYellowStyle())
-            .fullScreenCover(isPresented: self.$showCamera) {
-                accessCameraView(selectedImage: self.$selectedImage)
-                    .ignoresSafeArea(.all)
-            }
         }
     }
 
@@ -117,44 +109,6 @@ struct MyBicycleView: View {
     }
 }
 
-struct accessCameraView: UIViewControllerRepresentable {
-    @Binding var selectedImage: UIImage?
-    @Environment(\.presentationMode) var isPresented
-
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = context.coordinator
-        return imagePicker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-
-    }
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(picker: self)
-    }
-}
-
-// Coordinator will help to preview the selected image in the View.
-class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    var picker: accessCameraView
-
-    init(picker: accessCameraView) {
-        self.picker = picker
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[.originalImage] as? UIImage else { return }
-        self.picker.selectedImage = selectedImage
-        self.picker.isPresented.wrappedValue.dismiss()
-        NotificationCenter.default.post(name: .didRegisterBike, object: nil)
-    }
-}
-
 #Preview {
-    MyBicycleView()
-        .environmentObject(Store())
+    ContentView()
 }

@@ -72,5 +72,5 @@ struct MyBikeModal: View {
 }
 
 #Preview {
-    ShopViewModal(currentType: .frame)
+    MyBikeModal()
 }
