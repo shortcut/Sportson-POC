@@ -27,7 +27,6 @@
 		841406742BD7875F00F4D73C /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 841406732BD7875F00F4D73C /* ShortcutFoundation */; };
 		841406752BD7879A00F4D73C /* MyBicycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3FE2BCE9A10006BFFC7 /* MyBicycleView.swift */; };
 		841406762BD787B100F4D73C /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */; };
-		841406772BD787B500F4D73C /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
 		841406782BD787B700F4D73C /* RoundedCardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406252BD25FB900F4D73C /* RoundedCardModifier.swift */; };
 		841406792BD787C700F4D73C /* FSEmericWeb-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061A2BD240CD00F4D73C /* FSEmericWeb-Book.ttf */; };
 		8414067A2BD787CA00F4D73C /* FSEmericWeb-Core.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8414061B2BD240CD00F4D73C /* FSEmericWeb-Core.ttf */; };
@@ -46,6 +45,9 @@
 		8414068A2BD7B46200F4D73C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B292442BCFAFA700FD65C0 /* Images.xcassets */; };
 		8414068B2BD7B66700F4D73C /* MyBikeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406272BD27C0F00F4D73C /* MyBikeModal.swift */; };
 		8458909E2BD7E32B00270B9E /* ShortcutUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8458909D2BD7E32B00270B9E /* ShortcutUI */; };
+		845890A12BD8EFE200270B9E /* FakeNavbarClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */; };
+		845890A22BD8F1F200270B9E /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
+		845890A32BD8F1F400270B9E /* FakeNavbarClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */; };
 		845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */; };
 		845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DE3ED2BCD187E006BFFC7 /* ContentView.swift */; };
 		845DE3F02BCD187F006BFFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
@@ -117,6 +119,7 @@
 		841406842BD78A7B00F4D73C /* SportsonClipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsonClipModel.swift; sourceTree = "<group>"; };
 		841406872BD7AACE00F4D73C /* AppClipConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipConfig.swift; sourceTree = "<group>"; };
 		8458909C2BD7C50900270B9E /* Sportson-POC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sportson-POC.entitlements"; sourceTree = "<group>"; };
+		8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavbarClip.swift; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845DE3EB2BCD187E006BFFC7 /* Sportson_POCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sportson_POCApp.swift; sourceTree = "<group>"; };
 		845DE3ED2BCD187E006BFFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -317,6 +320,7 @@
 			children = (
 				848690C02BCFE2AC0079FE74 /* BackgroundModifier.swift */,
 				848690C62BCFF3640079FE74 /* FakeNavBar.swift */,
+				8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */,
 				841406252BD25FB900F4D73C /* RoundedCardModifier.swift */,
 			);
 			path = ViewModifiers;
@@ -487,12 +491,13 @@
 				841406762BD787B100F4D73C /* BackgroundModifier.swift in Sources */,
 				841406852BD78A7B00F4D73C /* SportsonClipModel.swift in Sources */,
 				841406882BD7AACE00F4D73C /* AppClipConfig.swift in Sources */,
+				845890A12BD8EFE200270B9E /* FakeNavbarClip.swift in Sources */,
 				841406822BD787FA00F4D73C /* Notificationcenter.Name+Extension.swift in Sources */,
 				841406802BD787EF00F4D73C /* Font+Extension.swift in Sources */,
 				841406752BD7879A00F4D73C /* MyBicycleView.swift in Sources */,
+				845890A22BD8F1F200270B9E /* FakeNavBar.swift in Sources */,
 				8414068B2BD7B66700F4D73C /* MyBikeModal.swift in Sources */,
 				841406812BD787F700F4D73C /* NotificationCenter+Extension.swift in Sources */,
-				841406772BD787B500F4D73C /* FakeNavBar.swift in Sources */,
 				8414067E2BD787DB00F4D73C /* CapsuleButtonYellowStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +512,7 @@
 				845DE4012BCE9A5D006BFFC7 /* MainStoreView.swift in Sources */,
 				841406262BD25FB900F4D73C /* RoundedCardModifier.swift in Sources */,
 				845DE4112BCEAB1B006BFFC7 /* TabBarView.swift in Sources */,
+				845890A32BD8F1F400270B9E /* FakeNavbarClip.swift in Sources */,
 				841406282BD27C0F00F4D73C /* MyBikeModal.swift in Sources */,
 				848690C72BCFF3640079FE74 /* FakeNavBar.swift in Sources */,
 				845DE3EE2BCD187E006BFFC7 /* ContentView.swift in Sources */,

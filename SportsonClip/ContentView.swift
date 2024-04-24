@@ -33,7 +33,7 @@ struct ContentView: View {
             }
         }
         .modifier(BackgroundModifier())
-        .modifier(FakeNavBarModifier(icon: "b", title: "Mina Cyklar"))
+        .modifier(FakeNavbarClip(icon: "b", title: "Mina Cyklar"))
         .sheet(isPresented: $store.shouldPresentBikeModal) {
             MyBikeModal()
         }

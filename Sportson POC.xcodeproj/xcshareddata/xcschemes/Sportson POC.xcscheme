@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8414065D2BD786BC00F4D73C"
-               BuildableName = "SportsonClip.app"
-               BlueprintName = "SportsonClip"
+               BlueprintIdentifier = "845DE3E72BCD187E006BFFC7"
+               BuildableName = "Sportson POC.app"
+               BlueprintName = "Sportson POC"
                ReferencedContainer = "container:Sportson POC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +32,6 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      appClipInvocationURLString = "https://shortcut-swe-test-appclip.com"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,16 +44,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8414065D2BD786BC00F4D73C"
-            BuildableName = "SportsonClip.app"
-            BlueprintName = "SportsonClip"
+            BlueprintIdentifier = "845DE3E72BCD187E006BFFC7"
+            BuildableName = "Sportson POC.app"
+            BlueprintName = "Sportson POC"
             ReferencedContainer = "container:Sportson POC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
-      appClipInvocationURLString = "https://shortcut-swe-test-appclip.com"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -63,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8414065D2BD786BC00F4D73C"
-            BuildableName = "SportsonClip.app"
-            BlueprintName = "SportsonClip"
+            BlueprintIdentifier = "845DE3E72BCD187E006BFFC7"
+            BuildableName = "Sportson POC.app"
+            BlueprintName = "Sportson POC"
             ReferencedContainer = "container:Sportson POC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

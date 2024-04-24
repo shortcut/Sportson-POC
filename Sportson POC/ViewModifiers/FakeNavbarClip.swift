@@ -1,14 +1,14 @@
 //
-//  FakeNavBar.swift
+//  FakeNavbarClip.swift
 //  Sportson POC
 //
-//  Created by Marco-Shortcut on 17. 4. 2024..
+//  Created by Marco-Shortcut on 24. 4. 2024..
 //
 
 import SwiftUI
 import ShortcutUI
 
-struct FakeNavBarModifier: ViewModifier {
+struct FakeNavbarClip: ViewModifier {
     var icon: String
     var title: String
 
@@ -42,7 +42,7 @@ struct FakeNavBarModifier: ViewModifier {
             .foregroundColor(Color.spYellow)
         }
         .background(Color.darkBg)
-        .frame(maxHeight: 140)
+        .frame(maxHeight: 80)
     }
 
     @ViewBuilder
@@ -60,5 +60,5 @@ struct FakeNavBarModifier: ViewModifier {
 
 #Preview {
     Text("Hello world")
-        .modifier(FakeNavBarModifier(icon: "b", title: "Title"))
+        .modifier(FakeNavbarClip(icon: "b", title: "Title"))
 }
