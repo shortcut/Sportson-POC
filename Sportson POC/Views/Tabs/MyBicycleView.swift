@@ -19,7 +19,7 @@ struct MyBicycleView: View {
             if store.isBikeRegistered || store.didRegisterBike {
                     bikeDetailView()
                         .padding(.horizontal, 16)
-                        .padding(.top, 70)
+                        .padding(.top, 80)
                     Button(action:  { },label: {
                         HStack {
                             Image(systemName: "slider.horizontal.3")
@@ -64,20 +64,21 @@ struct MyBicycleView: View {
     @ViewBuilder
     func bikeDetailView() -> some View {
         VStack {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                HStack(alignment: .top) {
                     Text("Cresent".uppercased())
                         .font(.emSemiBold(size: 14))
-                    Text("Kids Fantastic BMX")
-                        .font(.emBold(size: 26))
+                    Spacer()
+                    Text("Ramnummer: \(store.registeredSerialNumber)")
+                        .font(.emRegular(size: 14))
+                        .foregroundStyle(.gray)
                 }
+                .padding(.top, 8)
                 .foregroundColor(.black)
-                Spacer()
-                Text("Ramnummer: \(store.registeredSerialNumber)")
-                    .font(.emRegular(size: 14))
-                    .foregroundStyle(.gray)
+
+                Text("Kids Fantastic BMX")
+                    .font(.emBold(size: 26))
             }
-            .padding(.top, 8)
             Image("myBike")
                 .resizable()
                 .scaledToFit()
