@@ -64,7 +64,7 @@ struct MainStoreView: View {
             }
             .padding(.vertical, 16)
             DottedLine()
-                .stroke(style: .init(dash: [10]))
+                .stroke(style: .init(dash: [2]))
                 .foregroundStyle(.gray.opacity(0.5))
                             .frame(height: 1)
         }
