@@ -60,7 +60,7 @@ struct ContentView: View {
                 VStack(alignment: .leading) {
                     Text("Cresent".uppercased())
                         .font(.emSemiBold(size: 14))
-                    Text("Elina")
+                    Text("Kids Fantastic BMX")
                         .font(.emBold(size: 26))
                 }
                 .foregroundColor(.black)
