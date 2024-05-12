@@ -24,7 +24,27 @@ final class BookingViewModel: ObservableObject {
             }
         }
     }
-    
+
+    enum Service: String, CaseIterable, Identifiable {
+        case general, punkt, shift, brake, other
+        var id: Self { self }
+
+        func description() -> String {
+            switch self {
+            case .general:
+                return "Allmän Service"
+            case .punkt:
+                return "Punktering"
+            case .shift:
+                return "Växlar"
+            case .brake:
+                return "Bromsar"
+            case .other:
+                return "M.fl."
+            }
+        }
+    }
+
     let availableDates = Booking.availableDates()
 
     @Published var selectedPageIndex: Int = 0
@@ -39,7 +59,14 @@ final class BookingViewModel: ObservableObject {
             hasSelectedDate = selectedDate != .empty
         }
     }
-    @Published var selectedPhoneNumber: String = .empty 
+    @Published var selectedService: Service = .general {
+        didSet {
+            hasSelectedService = selectedService != .other
+        }
+    }
+    @Published var selectedPhoneNumber: String = .empty
+    @Published var selectedCode: String = .empty
+    @Published var extraInfo: String = .empty
 
     @Published var hasSelectedCity = false
     @Published var hasSelectedDate = false
@@ -47,5 +74,11 @@ final class BookingViewModel: ObservableObject {
     var hasGivenPhone: Bool {
         selectedPhoneNumber.count >= 9 && hasAcceptedTerms
     }
-
+    var hasGivenCode: Bool {
+        selectedCode.count >= 5
+    }
+    @Published var hasSelectedService = false
+    @Published var hasChosenPush = false
+    @Published var hasChosenSMS = false
+    @Published var hasChosenEmail = false
 }
