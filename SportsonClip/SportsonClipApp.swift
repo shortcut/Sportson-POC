@@ -8,10 +8,12 @@
 import SwiftUI
 import ShortcutFoundation
 import Core
+import UserNotifications
 
 @main
 struct SportsonClipApp: App {
     let context = Context(AppClipConfig())
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     @InjectObject private var store: Store
 
@@ -47,5 +49,51 @@ struct SportsonClipApp: App {
         store.savedSerialNumber = "546354"
 
         print("Sportson clip test 1 \(store.savedSerialNumber)")
+    }
+}
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                self.removeDelivered()
+                self.scheduleNotification()
+                print("Notification authorization granted")
+            } else {
+                self.removeAll()
+                print("Notification authorization denied")
+            }
+        }
+        return true
+    }
+
+    private func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.body = "Sportson notification body"
+        content.sound = UNNotificationSound.default
+
+        content.userInfo["link"] = "service"
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error.localizedDescription)")
+            } else {
+                print("Notification scheduled successfully")
+            }
+        }
+    }
+
+    private func removeAll() {
+        removeDelivered()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+
+    private func removeDelivered() {
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
 }

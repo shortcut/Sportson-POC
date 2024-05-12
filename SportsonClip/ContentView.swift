@@ -37,6 +37,9 @@ struct ContentView: View {
         .sheet(isPresented: $store.shouldPresentBikeModal) {
             MyBikeModal()
         }
+        .sheet(isPresented: $store.shouldPresentService) {
+            BookServiceModal()
+        }
     }
 
     var emptyStateView: some View {
@@ -81,6 +84,9 @@ struct ContentView: View {
                     store.shouldPresentBikeModal = true
                 }
             myBikeSelection("Boka cykelservice")
+                .onTapGesture {
+                    store.shouldPresentService = true
+                }
         }
         .padding(.horizontal, 16)
         .modifier(RoundedCardModifier())

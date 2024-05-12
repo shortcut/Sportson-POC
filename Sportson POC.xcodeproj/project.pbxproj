@@ -44,6 +44,10 @@
 		841406892BD7B45E00F4D73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845DE3EF2BCD187F006BFFC7 /* Assets.xcassets */; };
 		8414068A2BD7B46200F4D73C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B292442BCFAFA700FD65C0 /* Images.xcassets */; };
 		8414068B2BD7B66700F4D73C /* MyBikeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841406272BD27C0F00F4D73C /* MyBikeModal.swift */; };
+		84485C1F2BEB7E4200372EC3 /* BookServiceModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84485C1E2BEB7E4200372EC3 /* BookServiceModal.swift */; };
+		84485C202BEB7E4200372EC3 /* BookServiceModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84485C1E2BEB7E4200372EC3 /* BookServiceModal.swift */; };
+		84485C222BF0E5B500372EC3 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84485C212BF0E5B500372EC3 /* BookingViewModel.swift */; };
+		84485C232BF0E5B500372EC3 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84485C212BF0E5B500372EC3 /* BookingViewModel.swift */; };
 		8458909E2BD7E32B00270B9E /* ShortcutUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8458909D2BD7E32B00270B9E /* ShortcutUI */; };
 		845890A12BD8EFE200270B9E /* FakeNavbarClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */; };
 		845890A22BD8F1F200270B9E /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848690C62BCFF3640079FE74 /* FakeNavBar.swift */; };
@@ -118,6 +122,8 @@
 		8414066A2BD786BD00F4D73C /* SportsonClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportsonClip.entitlements; sourceTree = "<group>"; };
 		841406842BD78A7B00F4D73C /* SportsonClipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsonClipModel.swift; sourceTree = "<group>"; };
 		841406872BD7AACE00F4D73C /* AppClipConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipConfig.swift; sourceTree = "<group>"; };
+		84485C1E2BEB7E4200372EC3 /* BookServiceModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceModal.swift; sourceTree = "<group>"; };
+		84485C212BF0E5B500372EC3 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		8458909C2BD7C50900270B9E /* Sportson-POC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sportson-POC.entitlements"; sourceTree = "<group>"; };
 		8458909F2BD8EFB200270B9E /* FakeNavbarClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavbarClip.swift; sourceTree = "<group>"; };
 		845DE3E82BCD187E006BFFC7 /* Sportson POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportson POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +178,7 @@
 			children = (
 				841406142BD126BD00F4D73C /* ShopViewModal.swift */,
 				841406272BD27C0F00F4D73C /* MyBikeModal.swift */,
+				84485C1E2BEB7E4200372EC3 /* BookServiceModal.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -281,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				845DE4132BCEAB8E006BFFC7 /* TabBarViewModel.swift */,
+				84485C212BF0E5B500372EC3 /* BookingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -490,6 +498,7 @@
 				8414067F2BD787EA00F4D73C /* Color+Extensions.swift in Sources */,
 				841406762BD787B100F4D73C /* BackgroundModifier.swift in Sources */,
 				841406852BD78A7B00F4D73C /* SportsonClipModel.swift in Sources */,
+				84485C202BEB7E4200372EC3 /* BookServiceModal.swift in Sources */,
 				841406882BD7AACE00F4D73C /* AppClipConfig.swift in Sources */,
 				845890A12BD8EFE200270B9E /* FakeNavbarClip.swift in Sources */,
 				841406822BD787FA00F4D73C /* Notificationcenter.Name+Extension.swift in Sources */,
@@ -498,6 +507,7 @@
 				845890A22BD8F1F200270B9E /* FakeNavBar.swift in Sources */,
 				8414068B2BD7B66700F4D73C /* MyBikeModal.swift in Sources */,
 				841406812BD787F700F4D73C /* NotificationCenter+Extension.swift in Sources */,
+				84485C232BF0E5B500372EC3 /* BookingViewModel.swift in Sources */,
 				8414067E2BD787DB00F4D73C /* CapsuleButtonYellowStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,8 +535,10 @@
 				845DE3FF2BCE9A10006BFFC7 /* MyBicycleView.swift in Sources */,
 				841406242BD241EF00F4D73C /* Font+Extension.swift in Sources */,
 				845DE4032BCE9A83006BFFC7 /* ProfileView.swift in Sources */,
+				84485C1F2BEB7E4200372EC3 /* BookServiceModal.swift in Sources */,
 				8414062A2BD28C5300F4D73C /* DottedLine.swift in Sources */,
 				848690C12BCFE2AC0079FE74 /* BackgroundModifier.swift in Sources */,
+				84485C222BF0E5B500372EC3 /* BookingViewModel.swift in Sources */,
 				845DE3EC2BCD187E006BFFC7 /* Sportson_POCApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

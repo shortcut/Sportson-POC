@@ -14,9 +14,9 @@ struct ContentView: View {
 
     init() {
         UIScrollView.appearance().bounces = false
-        let transparentAppearence = UITabBarAppearance()
-        transparentAppearence.configureWithTransparentBackground() // 🔑
-        UITabBar.appearance().standardAppearance = transparentAppearence
+//        let transparentAppearence = UITabBarAppearance()
+//        transparentAppearence.configureWithTransparentBackground() // 🔑
+//        UITabBar.appearance().standardAppearance = transparentAppearence
     }
 
     var body: some View {

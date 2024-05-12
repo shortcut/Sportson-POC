@@ -18,5 +18,9 @@ struct AppConfig: Config {
         injector.map(TabBarViewModel.self) {
             TabBarViewModel()
         }
+
+        injector.map(BookingViewModel.self) {
+            BookingViewModel()
+        }
     }
 }

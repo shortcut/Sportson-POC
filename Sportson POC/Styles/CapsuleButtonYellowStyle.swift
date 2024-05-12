@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CapsuleButtonYellowStyle: ButtonStyle {
+    var enabled = true
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .background(Color.spYellow)
+            .background(enabled ? Color.spYellow: Color.gray)
             .foregroundStyle(.black)
             .clipShape(Capsule())
     }

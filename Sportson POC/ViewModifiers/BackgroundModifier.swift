@@ -14,7 +14,18 @@ struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(width: UIScreen.main.bounds.size.width,
-                   height: UIScreen.main.bounds.size.height)
+                   height: UIScreen.main.bounds.size.height - 140)
+            .background(backgroundColor)
+    }
+}
+
+struct ModalBackgroundModifier: ViewModifier {
+    var backgroundColor: Color = .mainBg
+
+    func body(content: Content) -> some View {
+        content
+            .frame(width: UIScreen.main.bounds.size.width,
+                   height: UIScreen.main.bounds.size.height - 80)
             .background(backgroundColor)
     }
 }

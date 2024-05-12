@@ -15,13 +15,15 @@ struct TabBarView: View {
     private var activeTabButtonWidth = UIScreen.main.bounds.size.width * 0.4
 
     var body: some View {
-        VStack(spacing: 0) {
+        ZStack(alignment: .bottom) {
+//        VStack(spacing: 0) {
             TabView(selection: $vm.selectedTab) {
                 ForEach(vm.tabs) { tab in
                     view(for: tab)
                         .tag(tab.rawValue)
                 }
             }
+//            .frame(height: UIScreen.main.bounds.size.height - 140)
             HStack {
                 ForEach((vm.tabs), id: \.self){ item in
                     Button{
@@ -49,6 +51,9 @@ struct TabBarView: View {
         }
         .sheet(isPresented: $store.shouldPresentBikeModal) {
             MyBikeModal()
+        }
+        .fullScreenCover(isPresented: $store.shouldPresentService) {
+            BookServiceModal()
         }
     }
 

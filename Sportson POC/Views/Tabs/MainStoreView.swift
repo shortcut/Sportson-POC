@@ -12,10 +12,8 @@ import Core
 struct MainStoreView: View {
     @InjectObject var store: Store
     var body: some View {
-        VStack(spacing: 0) {
-            VStack {
-                Rectangle().fill(.clear)
-                    .frame(height: 140)
+        VStack {
+            VStack(spacing: 0) {
                 VStack {
                     HStack {
                         Text("Kategorier")
@@ -40,10 +38,11 @@ struct MainStoreView: View {
                         .padding(.horizontal,16)
                     }
                 }
+                .frame(height: UIScreen.main.bounds.size.height - 250)
                 .modifier(RoundedCardModifier())
-                .padding(.top, 20)
-                .padding(.horizontal, 16)
+                .padding([.top, .horizontal], 16)
             }
+            Spacer()
         }
         .modifier(BackgroundModifier())
         .modifier(FakeNavBarModifier(icon: "c", title: "Butik"))

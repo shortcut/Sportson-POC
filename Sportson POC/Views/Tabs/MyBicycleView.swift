@@ -19,7 +19,6 @@ struct MyBicycleView: View {
             if store.isBikeRegistered || store.didRegisterBike {
                     bikeDetailView()
                         .padding(.horizontal, 16)
-                        .padding(.top, 80)
                     Button(action:  { },label: {
                         HStack {
                             Image(systemName: "slider.horizontal.3")
@@ -31,6 +30,7 @@ struct MyBicycleView: View {
                     })
                     .frame(height: 50)
                     .buttonStyle(CapsuleButtonClearStyle())
+                Spacer()
             } else {
                 emptyStateView
             }
@@ -52,7 +52,6 @@ struct MyBicycleView: View {
                 }
                 .frame(width: UIScreen.main.bounds.size.width * 0.8)
             })
-            .padding(.top, 140)
             .buttonStyle(CapsuleButtonYellowStyle())
             .fullScreenCover(isPresented: self.$showCamera) {
                 accessCameraView(selectedImage: self.$selectedImage)
@@ -90,9 +89,13 @@ struct MyBicycleView: View {
                     store.shouldPresentBikeModal = true
                 }
             myBikeSelection("Boka cykelservice")
+                .onTapGesture {
+                    store.shouldPresentService = true
+                }
         }
         .padding(.horizontal, 16)
         .modifier(RoundedCardModifier())
+        .padding(.top, 16)
     }
 
     @ViewBuilder

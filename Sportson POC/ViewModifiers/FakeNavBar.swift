@@ -11,24 +11,33 @@ import ShortcutUI
 struct FakeNavBarModifier: ViewModifier {
     var icon: String
     var title: String
+    var action: (() -> ())? = nil
+    let navBarHeight: CGFloat = 80
 
     func body(content: Content) -> some View {
-        ZStack {
-            content
-            VStack {
-                navbar(icon: icon, title: title)
-                Spacer()
+        ZStack(alignment: .top) {
+            VStack(spacing: 0) {
+                Rectangle()
+                    .frame(height: navBarHeight)
+                content
             }
+            navbar(icon: icon, title: title, action: action)
         }
     }
 
     @ViewBuilder
-    func navbar(icon: String, title: String) -> some View {
+    func navbar(icon: String, title: String, action: (() -> ())? = nil) -> some View {
         VStack(spacing: 0) {
             Spacer()
             HStack(alignment: .bottom) {
                 if !title.isEmpty {
-                    headerText(icon: icon, text: title)
+                    if let action {
+                        backButton {
+                            action()
+                        }
+                    } else {
+                        headerText(icon: icon, text: title)
+                    }
                     Spacer()
                     Image("sportson_logo_big")
                         .resizable()
@@ -42,7 +51,7 @@ struct FakeNavBarModifier: ViewModifier {
             .foregroundColor(Color.spYellow)
         }
         .background(Color.darkBg)
-        .frame(maxHeight: 140)
+        .frame(height: navBarHeight)
     }
 
     @ViewBuilder
@@ -54,6 +63,18 @@ struct FakeNavBarModifier: ViewModifier {
                 .font(.emRegular(size: 16))
 
         }
+        .padding(.leading, 16)
+    }
+
+    @ViewBuilder
+    func backButton(_ action: @escaping ()->()) -> some View {
+        Button(action: action, label: {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+            Text("Tillbaka")
+                .font(.emRegular(size: 16))
+        })
         .padding(.leading, 16)
     }
 }
