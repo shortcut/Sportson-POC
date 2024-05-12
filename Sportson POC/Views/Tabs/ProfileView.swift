@@ -18,7 +18,8 @@ struct ProfileView: View {
                 userCard()
                 companyCard()
             }
-            .padding(.horizontal, 16)
+            .padding([.top, .horizontal], 16)
+            Spacer()
         }
         .modifier(BackgroundModifier())
         .modifier(FakeNavBarModifier(icon: "k", title: "Min Profil"))

@@ -16,8 +16,8 @@ struct AppClipConfig: Config {
             Store()
         }
 
-//        injector.map(TabBarViewModel.self) {
-//            TabBarViewModel()
-//        }
+        injector.map(BookingViewModel.self) {
+            BookingViewModel()
+        }
     }
 }
