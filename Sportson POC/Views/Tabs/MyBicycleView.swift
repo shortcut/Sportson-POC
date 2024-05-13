@@ -12,7 +12,7 @@ import Core
 struct MyBicycleView: View {
     @EnvironmentObject var store: Store
     @State private var showCamera = false
-    @State private var selectedImage: UIImage?
+    @State private var detectedQRCode: String? = nil
 
     var body: some View {
         VStack() {
@@ -54,7 +54,7 @@ struct MyBicycleView: View {
             })
             .buttonStyle(CapsuleButtonYellowStyle())
             .fullScreenCover(isPresented: self.$showCamera) {
-                accessCameraView(selectedImage: self.$selectedImage)
+                QRCodeScannerView(detectedQRCode: $detectedQRCode)
                     .ignoresSafeArea(.all)
             }
         }
@@ -121,40 +121,72 @@ struct MyBicycleView: View {
     }
 }
 
-struct accessCameraView: UIViewControllerRepresentable {
-    @Binding var selectedImage: UIImage?
-    @Environment(\.presentationMode) var isPresented
-
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = context.coordinator
-        return imagePicker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-
-    }
+struct QRCodeScannerView: UIViewControllerRepresentable {
+    @Binding var detectedQRCode: String?
 
     func makeCoordinator() -> Coordinator {
-        return Coordinator(picker: self)
-    }
-}
-
-// Coordinator will help to preview the selected image in the View.
-class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    var picker: accessCameraView
-
-    init(picker: accessCameraView) {
-        self.picker = picker
+        Coordinator(self)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[.originalImage] as? UIImage else { return }
-        self.picker.selectedImage = selectedImage
-        self.picker.isPresented.wrappedValue.dismiss()
-        NotificationCenter.default.post(name: .didRegisterBike, object: nil)
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewController = UIViewController()
+        let captureSession = AVCaptureSession()
+
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
+            fatalError("No video camera available")
+        }
+        let videoInput: AVCaptureDeviceInput
+
+        do {
+            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
+        } catch {
+            fatalError("Unable to obtain video input")
+        }
+
+        if (captureSession.canAddInput(videoInput)) {
+            captureSession.addInput(videoInput)
+        } else {
+            fatalError("Unable to add video input")
+        }
+
+        let metadataOutput = AVCaptureMetadataOutput()
+
+        if (captureSession.canAddOutput(metadataOutput)) {
+            captureSession.addOutput(metadataOutput)
+
+            metadataOutput.setMetadataObjectsDelegate(context.coordinator, queue: DispatchQueue.main)
+            metadataOutput.metadataObjectTypes = [.qr]  // QR Code
+        } else {
+            fatalError("Unable to add metadata output")
+        }
+
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = viewController.view.layer.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        viewController.view.layer.addSublayer(previewLayer)
+
+        captureSession.startRunning()
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+    }
+
+    class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+        var parent: QRCodeScannerView
+
+        init(_ parent: QRCodeScannerView) {
+            self.parent = parent
+        }
+
+        func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+            if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
+                if metadataObject.type == .qr, let stringValue = metadataObject.stringValue {
+                    parent.detectedQRCode = stringValue
+                    NotificationCenter.default.post(name: .didRegisterBike, object: nil)
+                }
+            }
+        }
     }
 }
 
