@@ -75,7 +75,7 @@ struct MyBicycleView: View {
                 .padding(.top, 8)
                 .foregroundColor(.black)
 
-                Text("Kids Fantastic BMX")
+                Text("Diverge E5 Expert Evo")
                     .font(.emBold(size: 26))
             }
             Image("myBike")

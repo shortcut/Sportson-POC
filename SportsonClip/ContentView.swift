@@ -16,7 +16,6 @@ struct ContentView: View {
             if store.isBikeRegistered || store.didRegisterBike {
                     bikeDetailView()
                         .padding(.horizontal, 16)
-                        .padding(.top, 70)
                     Button(action:  { },label: {
                         HStack {
                             Image(systemName: "slider.horizontal.3")
@@ -33,11 +32,11 @@ struct ContentView: View {
             }
         }
         .modifier(BackgroundModifier())
-        .modifier(FakeNavbarClip(icon: "b", title: "Mina Cyklar"))
+        .modifier(FakeNavBarModifier(icon: "b", title: "Mina Cyklar"))
         .sheet(isPresented: $store.shouldPresentBikeModal) {
             MyBikeModal()
         }
-        .sheet(isPresented: $store.shouldPresentService) {
+        .fullScreenCover(isPresented: $store.shouldPresentService) {
             BookServiceModal()
         }
     }
@@ -63,7 +62,7 @@ struct ContentView: View {
                 VStack(alignment: .leading) {
                     Text("Cresent".uppercased())
                         .font(.emSemiBold(size: 14))
-                    Text("Kids Fantastic BMX")
+                    Text("Diverge E5 Expert Evo")
                         .font(.emBold(size: 26))
                 }
                 .foregroundColor(.black)

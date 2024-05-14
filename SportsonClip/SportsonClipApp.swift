@@ -53,11 +53,14 @@ struct SportsonClipApp: App {
 }
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
+    @Inject var notifications: INotifications
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
+        notifications.setup()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted {
                 self.removeDelivered()
-                self.scheduleNotification()
+                self.notifications.scheduleRequest(for: .welcome, details: .empty)
                 print("Notification authorization granted")
             } else {
                 self.removeAll()
@@ -65,27 +68,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
             }
         }
         return true
-    }
-
-    private func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Title"
-        content.body = "Sportson notification body"
-        content.sound = UNNotificationSound.default
-
-        content.userInfo["link"] = "service"
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
-
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Error scheduling notification: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled successfully")
-            }
-        }
     }
 
     private func removeAll() {

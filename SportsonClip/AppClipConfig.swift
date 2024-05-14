@@ -19,5 +19,9 @@ struct AppClipConfig: Config {
         injector.map(BookingViewModel.self) {
             BookingViewModel()
         }
+
+        injector.map(INotifications.self) {
+            NotificationManager()
+        }
     }
 }

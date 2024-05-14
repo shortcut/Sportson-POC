@@ -42,8 +42,12 @@ struct BookServiceModal: View {
     }
 
     private func continueAction() {
+        @LazyInject var notifications: INotifications
         guard vm.selectedPageIndex < 5 else {
             store.shouldPresentService = false
+            if vm.hasChosenPush {
+                notifications.scheduleRequest(for: .serviceBooked, details: vm.selectedDate)
+            }
             return
         }
         vm.selectedPageIndex += 1
